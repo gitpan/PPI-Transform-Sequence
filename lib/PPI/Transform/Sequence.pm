@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: Tiny binder to combine multiple PPI::Transform objects
-our $VERSION = 'v0.0.1'; # VERSION
+our $VERSION = 'v0.0.2'; # VERSION
 
 use parent qw(PPI::Transform);
 
@@ -55,7 +55,7 @@ PPI::Transform::Sequence - Tiny binder to combine multiple PPI::Transform object
 
 =head1 VERSION
 
-version v0.0.1
+version v0.0.2
 
 =head1 SYNOPSIS
 

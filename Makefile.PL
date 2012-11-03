@@ -11,7 +11,9 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Tiny binder to combine multiple PPI::Transform objects",
   "AUTHOR" => "Yasutaka ATARASHI <yakex\@cpan.org>",
-  "BUILD_REQUIRES" => {},
+  "BUILD_REQUIRES" => {
+    "Test::Exception" => 0
+  },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -23,7 +25,7 @@ my %WriteMakefileArgs = (
     "PPI::Transform" => 0,
     "parent" => 0
   },
-  "VERSION" => "v0.0.1",
+  "VERSION" => "v0.0.2",
   "test" => {
     "TESTS" => "t/*.t"
   }
