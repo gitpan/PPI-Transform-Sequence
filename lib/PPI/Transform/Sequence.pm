@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: Tiny binder to combine multiple PPI::Transform objects
-our $VERSION = 'v0.0.2'; # VERSION
+our $VERSION = 'v0.0.3'; # VERSION
 
 use parent qw(PPI::Transform);
 
@@ -37,7 +37,7 @@ sub document
 {
     my ($self, $doc) = @_;
     my $count = 0;
-    while(my (undef, $trans) = each @$self) {
+    foreach my $trans (@$self) {
         $count += $trans->document($doc);
     }
     return $count;
@@ -55,7 +55,7 @@ PPI::Transform::Sequence - Tiny binder to combine multiple PPI::Transform object
 
 =head1 VERSION
 
-version v0.0.2
+version v0.0.3
 
 =head1 SYNOPSIS
 

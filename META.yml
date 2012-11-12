@@ -17,4 +17,4 @@ requires:
   PPI::Transform: 0
   parent: 0
   perl: 5.006
-version: v0.0.2
+version: v0.0.3
